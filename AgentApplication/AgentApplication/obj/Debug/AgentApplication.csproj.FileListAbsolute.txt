@@ -43,3 +43,27 @@ E:\Faks\Jovic\8.semestar\XML i Web servisi\AgentApplication\AgentApplication\Age
 E:\Faks\Jovic\8.semestar\XML i Web servisi\AgentApplication\AgentApplication\AgentApplication\obj\Debug\AgentApplication.csproj.CoreCompileInputs.cache
 E:\Faks\Jovic\8.semestar\XML i Web servisi\AgentApplication\AgentApplication\AgentApplication\obj\Debug\AgentApplication.exe
 E:\Faks\Jovic\8.semestar\XML i Web servisi\AgentApplication\AgentApplication\AgentApplication\obj\Debug\AgentApplication.pdb
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\AgentApplication.exe.config
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\AgentApplication.exe
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\AgentApplication.pdb
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.csprojAssemblyReference.cache
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\View\MainWindow.g.cs
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\App.g.cs
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication_MarkupCompile.cache
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication_MarkupCompile.lref
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\View\MainWindow.baml
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.g.resources
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.Properties.Resources.resources
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.csproj.GenerateResource.cache
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.csproj.CoreCompileInputs.cache
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.exe
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.pdb
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\EntityFramework.xml
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.csproj.CopyComplete
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\EntityFramework.dll
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\obj\Debug\AgentApplication.Migrations.First.resources
