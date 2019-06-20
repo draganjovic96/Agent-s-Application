@@ -86,10 +86,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DBContext\AddressDBContext.cs" />
-    <Compile Include="Migrations\201906192253508_First.cs" />
-    <Compile Include="Migrations\201906192253508_First.Designer.cs">
-      <DependentUpon>201906192253508_First.cs</DependentUpon>
+    <Compile Include="DBContext\AgentAppDBContext.cs" />
+    <Compile Include="Migrations\201906201127595_First.cs" />
+    <Compile Include="Migrations\201906201127595_First.Designer.cs">
+      <DependentUpon>201906201127595_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Accommodation.cs" />
@@ -103,7 +103,6 @@
     <Compile Include="Model\Reservation.cs" />
     <Compile Include="Model\Service.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="Model\rezervacija_korisnici_smestaj.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -123,8 +122,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201906192253508_First.resx">
-      <DependentUpon>201906192253508_First.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906201127595_First.resx">
+      <DependentUpon>201906201127595_First.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,6 +157,7 @@
     <Resource Include="View\Resources\room_update.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Dto\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>

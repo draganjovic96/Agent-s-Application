@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:AgentApplication"
         mc:Ignorable="d"
         Icon="Resources/logo.png"
+        ResizeMode="NoResize"
         Title="Agent's application" Height="450" Width="900">
     <Window.Background>
         <ImageBrush ImageSource="Resources/login_background.jpg"></ImageBrush>

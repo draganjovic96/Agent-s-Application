@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AgentApplication.Model
 {
-	class Image
+	public class Image
 	{
-		private long Id { get; set; }
-		private string Name { get; set; }
-		private byte Img { get; set; }
+		[Key]
+		public long Id { get; set; }
+
+		public string Name { get; set; }
+
+		public byte Img { get; set; }
+
+		public Accommodation Accommodation { get; set; }
 	}
 }

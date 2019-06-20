@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,29 +22,35 @@ namespace AgentApplication.Model
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://booking.uns.ac.rs/accommodation")]
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://booking.uns.ac.rs/accommodation", IsNullable = false)]
-
+	
 	public class Accommodation
 	{
 
-		private List<Service> service { get; set; }
+		[Key]
+		public long id { get; set; }
 
-		private string description { get; set; }
+		public List<Service> Services { get; set; }
 
-		private string name { get; set; }
+		[Required]
+		public string Description { get; set; }
 
-		private List<Image> images { get; set; }
+		[Required]
+		public string Name { get; set; }
 
-		private List<AccommodationUnit> accommodationUnits { get; set; }
+		public List<Image> Images { get; set; }
+		
+		public List<AccommodationUnit> AccommodationUnits { get; set; }
 
-		private List<User> agents { get; set; }
+		public List<User> Agents { get; set; }
 
-		private String category { get; set; }
+		[Required]
+		public String Category { get; set; }
 
-		private Address address { get; set; }
+		[Required]
+		public Address Address { get; set; }
 
-		private AccommodationType accommodationType { get; set; }
-
-		private long id { get; set; }
+		[Required]
+		public AccommodationType AccommodationType { get; set; }
 
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,14 @@ namespace AgentApplication.Model
 
 	public class AccommodationUnitType
 	{
-		private long id { get; set; }
+		[Key]
+		public long id { get; set; }
 
-		private string name { get; set; }
+		[Required]
+		public string name { get; set; }
 
-		private bool deleted { get; set;  }
+		public bool deleted { get; set;  }
+
+		public List<AccommodationUnit> accommodationUnits { get; set; }
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,15 +16,18 @@ namespace AgentApplication.Model
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://booking.uns.ac.rs/accommodation", IsNullable = false)]
 	public class PeriodPrice
 	{
+		[Key]
+		public long Id { get; set; }
 
-		private DateTime fromDate { get; set; }
+		public DateTime FromDate { get; set; }
 
-		private DateTime toDate { get; set; }
+		public DateTime ToDate { get; set; }
 
-		private double price { get; set; }
+		public double Pice { get; set; }
 
-		private long id { get; set; }
+		public bool Deleted { get; set; }
 
+		public AccommodationUnit AccommodationUnit { get; set; }
 	}
 	
 }

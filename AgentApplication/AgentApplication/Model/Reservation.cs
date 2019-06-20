@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,22 +16,25 @@ namespace AgentApplication.Model
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://booking.uns.ac.rs/reservation", IsNullable = false)]
 	public class Reservation
 	{
+		[Key]
+		public long Id { get; set; }
 
-		private DateTime fromDate { get; set; }
+		public DateTime FromDate { get; set; }
 
-		private DateTime toDateField { get; set; }
+		public DateTime ToDate { get; set; }
 
-		private bool confirmedField { get; set; }
+		public bool Confirmed { get; set; }
 
-		private ReservationConversation conversationField { get; set; }
+		public bool AgentConfirmed { get; set; }
 
-		private ReservationComment_rate commentRateField { get; set; }
+		public CommentRate CommentRate { get; set; }
 
-		private AccommodationUnit accommodationUnitField { get; set; }
+		[Required]
+		public AccommodationUnit AccommodationUnit { get; set; }
 
-		private User guest;
+		public List<Message> Messages { get; set; }
 
-		private long id;
+		public User Guest { get; set; }
 				
 	}
 }

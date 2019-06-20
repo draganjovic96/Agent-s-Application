@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,18 +17,28 @@ namespace AgentApplication.Model
 
 	public class AccommodationUnit
 	{
-		private int floor { get; set; }
+		public int Floor { get; set; }
 
-		private string number { get; set; }
+		[Required]
+		public string Number { get; set; }
 
-		private int numberOfBeds { get; set; }
+		public int NumberOfBeds { get; set; }
 
-		private double defaultPrice { get; set; }
+		public double DefaultPrice { get; set; }
 
-		private PeriodPrice periodPriceField { get; set; }
+		public bool Deleted;
 
-		private AccommodationUnitType accommodationUnitType { get; set; }
+		public List<PeriodPrice> PeriodPrices { get; set; }
 
-		private long id;
+		public List<Reservation> Reservations { get; set; }
+
+		[Required]
+		public AccommodationUnitType AccommodationUnitType { get; set; }
+
+		[Key]
+		public long Id { get; set; }
+
+		[Required]
+		public Accommodation Accommodation { get; set; }
 	}
 }

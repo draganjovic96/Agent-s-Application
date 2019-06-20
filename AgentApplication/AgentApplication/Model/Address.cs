@@ -37,6 +37,9 @@ namespace AgentApplication.Model
 
 		public double latitude { get; set; }
 
+		[Required]
+		public bool deleted { get; set; }
+
 		[Key]
 		public long id { get; set; }
 

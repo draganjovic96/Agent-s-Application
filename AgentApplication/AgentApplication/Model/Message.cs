@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,18 +16,24 @@ namespace AgentApplication.Model
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://booking.uns.ac.rs/reservation", IsNullable = false)]
 	public class Message
 	{
+		[Key]
+		public long Id { get; set; }
 
-		private string messageContent { get; set; }
+		public string MessageContent { get; set; }
 
-		private bool seen { get; set; }
+		public bool Seen { get; set; }
 
-		private User sender { get; set; }
+		public User Sender { get; set; }
 
-		private User reciever { get; set; }
+		public User Receiver { get; set; }
 
-		private long id { get; set; }
+		public DateTime DatumVreme { get; set; }
 
-		private DateTime datumVreme { get; set; }
+		public bool Deleted { get; set; }
+
+		public Reservation Reservation { get; set; }
+
+		public Accommodation Accommodation { get; set; }
 
 	}
 }
