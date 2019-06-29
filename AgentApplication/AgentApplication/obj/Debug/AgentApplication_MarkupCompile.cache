@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Jovic\Source\Repos\draganjovic96\Agent-s-Application\AgentApplication\AgentApplication\App.xaml
-1-1711142684
+15-1958259040
 
-9-1635097210
-131569487696
-View\MainWindow.xaml;
+68-28225505
+311563189691
+View\AccommodationProfile.xaml;View\AddressWindow.xaml;View\AgentProfile.xaml;View\Comments.xaml;View\HomePage.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\Messenger.xaml;View\Reservation.xaml;View\Reservations.xaml;View\Service.xaml;View\Services.xaml;View\Units.xaml;View\UnitType.xaml;View\UnitTypes.xaml;
 
-True
+False
 

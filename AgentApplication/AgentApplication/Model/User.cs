@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgentApplication.UserService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace AgentApplication.Model
 {
-	public enum UserRole {
+	public enum UserRole
+	{
 		REGISTERED_USER,
 		AGENT,
 		ADMINISTRATOR
@@ -22,6 +24,7 @@ namespace AgentApplication.Model
 	public class User
 	{
 		[Key]
+		[DatabaseGenerated(DatabaseGeneratedOption.None)]
 		public long id { get; set; }
 
 		[Required]
@@ -58,13 +61,61 @@ namespace AgentApplication.Model
 		[Required]
 		public bool blocked { get; set; }
 
-		//public List<Reservation> Reservations { get; set;}
-
 		public Accommodation AgentOfAccommodation { get; set; }
 
-		//public List<Message> ReceivedMessages { get; set; }
+		public User(UserService.user User)
+		{
 
-		//public List<Message> SentMessages { get; set; }
+			id = User.Id;
+			name = User.Name;
+			lastname = User.Lastname;
+			username = User.Username;
+			email = User.Email;
+			password = User.Password;
+			enabled = User.Enabled;
+			deleted = User.Deleted;
+			role = (UserRole)Enum.Parse(typeof(UserRole), User.Role.ToString(), true);
+			address = new Address(User.Address);
+			blocked = User.Blocked;
+			businessRegistrationNumber = User.Bussines_registration_number;
+		}
 
+		public User()
+		{
+		}
+
+		public User(MessageService.user User)
+		{
+
+			id = User.Id;
+			name = User.Name;
+			lastname = User.Lastname;
+			username = User.Username;
+			email = User.Email;
+			password = User.Password;
+			enabled = User.Enabled;
+			deleted = User.Deleted;
+			role = (UserRole)Enum.Parse(typeof(UserRole), User.Role.ToString(), true);
+			address = new Address(User.Address);
+			blocked = User.Blocked;
+			businessRegistrationNumber = User.Bussines_registration_number;
+		}
+
+		public User(ReservationService.user User)
+		{
+
+			id = User.Id;
+			name = User.Name;
+			lastname = User.Lastname;
+			username = User.Username;
+			email = User.Email;
+			password = User.Password;
+			enabled = User.Enabled;
+			deleted = User.Deleted;
+			role = (UserRole)Enum.Parse(typeof(UserRole), User.Role.ToString(), true);
+			address = new Address(User.Address);
+			blocked = User.Blocked;
+			businessRegistrationNumber = User.Bussines_registration_number;
+		}
 	}
 }
