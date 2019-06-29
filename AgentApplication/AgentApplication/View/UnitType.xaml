@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="AgentApplication.View.UnitType"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AgentApplication.View"
+              Height="440" Width="760" Background="#FFFDFDFD">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="120*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.526,2.162" Grid.Column="1" Width="150" Height="30" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Grid.Column="3" Grid.Row="1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="0,190,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1" Grid.Row="1" Height="50"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="0,190,0,0" VerticalAlignment="Top" Width="150" Grid.Column="3" Grid.Row="1" Height="50"/>
+
+    </Grid>
+</UserControl>

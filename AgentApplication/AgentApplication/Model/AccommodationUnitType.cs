@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace AgentApplication.Model
 	public class AccommodationUnitType
 	{
 		[Key]
+		[DatabaseGenerated(DatabaseGeneratedOption.None)]
 		public long id { get; set; }
 
 		[Required]
@@ -26,5 +28,19 @@ namespace AgentApplication.Model
 		public bool deleted { get; set;  }
 
 		public List<AccommodationUnit> accommodationUnits { get; set; }
+
+		public AccommodationUnitType(AccommodationUnitService.accommodationUnitType accommodationUnitType)
+		{
+			this.id = accommodationUnitType.Id;
+			this.name = accommodationUnitType.Name;
+			this.deleted = false;
+		}
+
+		public AccommodationUnitType(PeriodPriceService.accommodationUnitType accommodationUnitType)
+		{
+			this.id = accommodationUnitType.Id;
+			this.name = accommodationUnitType.Name;
+			this.deleted = false;
+		}
 	}
 }

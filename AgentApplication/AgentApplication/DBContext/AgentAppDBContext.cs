@@ -19,16 +19,19 @@ namespace AgentApplication.DBContext
 		public DbSet<Message> Messages { get; set; }
 		public DbSet<PeriodPrice> PeriodPrices { get; set; }
 		public DbSet<Reservation> Reservations { get; set; }
-		public DbSet<Service> Services { get; set; }
+		public DbSet<Model.Service> Services { get; set; }
 		public DbSet<User> User { get; set; }
 
-		/*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<Reservation>()
-			.HasOptional<User>(s => s.Guest)
-			.WithMany()
-			.WillCascadeOnDelete(false);
-			
-		}*/
+			/*modelBuilder.Entity<User>()
+			.HasOptional(a => a.address)
+			.WithRequired(ab => ab.user);*/
+
+			modelBuilder.Entity<Accommodation>()
+				.HasMany<User>(a => a.Agents)
+				.WithOptional(ab => ab.AgentOfAccommodation);
+
+		}
 	}
 }

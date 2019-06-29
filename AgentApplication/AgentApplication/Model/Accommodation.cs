@@ -1,19 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using AgentApplication.AccommodationService;
 
 namespace AgentApplication.Model
 {
 	public enum AccommodationType
 	{
-
+		[Description("Hotel")]
 		HOTEL,
+		[Description("Motel")]
 		MOTEL,
-		BAD_AND_BREAKFAST
+		[Description("Bed&Breakfast")]
+		BED_AND_BREAKFAST
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
@@ -23,34 +28,128 @@ namespace AgentApplication.Model
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://booking.uns.ac.rs/accommodation")]
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://booking.uns.ac.rs/accommodation", IsNullable = false)]
 	
-	public class Accommodation
+	public class Accommodation : INotifyPropertyChanged
 	{
 
 		[Key]
-		public long id { get; set; }
+		[DatabaseGenerated(DatabaseGeneratedOption.None)]
+		public long Id { get; set; }
 
-		public List<Service> Services { get; set; }
-
-		[Required]
-		public string Description { get; set; }
+		private List<Service> services;
 
 		[Required]
-		public string Name { get; set; }
-
-		public List<Image> Images { get; set; }
-		
-		public List<AccommodationUnit> AccommodationUnits { get; set; }
-
-		public List<User> Agents { get; set; }
+		private string description;
 
 		[Required]
-		public String Category { get; set; }
+		private string name;
+
+		private List<AccommodationUnit> accommodationUnits;
 
 		[Required]
-		public Address Address { get; set; }
+		private List<User> agents;
 
 		[Required]
-		public AccommodationType AccommodationType { get; set; }
+		private string category;
 
+		[Required]
+		private Address address;
+
+		[Required]
+		private AccommodationType accommodationType;
+
+		public List<Service> Services
+		{
+			get => services;
+			set
+			{
+				services = value;
+			}
+		}
+		public string Description
+		{
+			get => description;
+			set
+			{
+				description = value;
+				OnPropertyChanged("Description");
+			}
+		}
+		public string Name
+		{
+			get => name;
+			set
+			{
+				name = value;
+				OnPropertyChanged("Name");
+
+			}
+		}
+		public List<AccommodationUnit> AccommodationUnits
+		{
+			get => accommodationUnits;
+			set => accommodationUnits = value;
+		}
+		public List<User> Agents
+		{
+			get => agents;
+			set => agents = value;
+		}
+		public string Category
+		{
+			get => category;
+			set
+			{
+				category = value;
+				OnPropertyChanged("Category");
+			}
+		}
+		public Address Address
+		{
+			get => address;
+			set => address = value;
+		}
+		public AccommodationType AccommodationType
+		{
+			get => accommodationType;
+			set
+			{
+				accommodationType = value;
+				OnPropertyChanged("AccommodationType");
+			}
+		}
+
+		public Accommodation(AccommodationService.accommodation accommodation)
+		{
+			this.Id = accommodation.Id;
+			this.Name = accommodation.Name;
+			this.Address = new Address(accommodation.Address);
+			this.Category = accommodation.Category;
+			this.AccommodationType = (AccommodationType)Enum.Parse(typeof(AccommodationType), accommodation.AccommodationType.ToString(), true);
+			this.Description = accommodation.Description;
+		}
+
+		public Accommodation(AccommodationUnitService.accommodation accommodation)
+		{
+			this.Id = accommodation.Id;
+			this.Name = accommodation.Name;
+			this.Address = new Address(accommodation.Address);
+			this.Category = accommodation.Category;
+			this.AccommodationType = (AccommodationType)Enum.Parse(typeof(AccommodationType), accommodation.AccommodationType.ToString(), true);
+			this.Description = accommodation.Description;
+		}
+
+		public Accommodation()
+		{
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		private void OnPropertyChanged(string PropertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+			}
+		}
 	}
 }
